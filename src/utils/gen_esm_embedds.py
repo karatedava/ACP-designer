@@ -15,7 +15,7 @@ class Embedder():
         self.model = model.half()
     
     @torch.no_grad
-    def get_embeddings(self, seqs:np.array, maxlen:int=50, bs:int = 4) -> np.array:
+    def get_embeddings(self, seqs:np.array, maxlen:int=50, bs:int = 4) -> np.ndarray:
 
         embeddings = []
 

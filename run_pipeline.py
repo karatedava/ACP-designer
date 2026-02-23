@@ -3,6 +3,7 @@ CLI - main running script (entry point)
 """
 
 import argparse
+from pathlib import Path
 
 from src.config import GENGRU_PATH, CTT_PATH, DIST_DATA_PATH, OUTPUT_PATH, FOLDER_SIGNATURE, DROP_COLS, DEVICE
 from src.generators.architectures.architectures import GenRNN
@@ -53,6 +54,22 @@ def parse_args():
         choices=['cpu', 'cuda', 'mps'],
         default=DEVICE,
         help="device for computation"
+    )
+
+    ### custom model selection ###
+
+    parser.add_argument(
+        '--model_ctt',
+        type=Path,
+        default=CTT_PATH,
+        help="path to classification model"
+    )
+
+    parser.add_argument(
+        '--model_gen',
+        type=Path,
+        default=GENGRU_PATH,
+        help="path to generative model"
     )
 
     args = parser.parse_args()

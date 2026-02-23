@@ -118,7 +118,7 @@ Customize runs with these parameters:
 | `--id`   | run id to mark each run uniquely           | integer value, always required |
 | `--nbatch`        | controls amount of generated peptides               | `100` (default)                     |
 | `--device`      | device                              | `cpu` (default), `cuda`, `mps`             |
-| `--mutate`          | sequnce to mutate                                  | string of amino acids, i.e: `KKWLKA...` |
+| `--mutate`          | sequence to mutate                                  | string of amino acids, i.e: `KKWLKA...` |
 
 ---
 
@@ -148,6 +148,7 @@ We were able to design novel Mastoparan mutants with low hemolytic activity (RBC
 
 ---
 
-## Future Plans
-*Work in progress!*  
+## Retraining models 
+
+Documentation for **retraining** is described here: 'docs/retraining.png'
 
